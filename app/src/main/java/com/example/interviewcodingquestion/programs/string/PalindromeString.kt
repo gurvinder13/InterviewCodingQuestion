@@ -1,4 +1,4 @@
-package com.example.interviewcodingquestion.programs
+package com.example.interviewcodingquestion.programs.string
 
 /**
  * A palindrome string is a sequence of characters that reads the same forwards and backwards.

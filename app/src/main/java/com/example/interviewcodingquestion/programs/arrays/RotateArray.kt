@@ -1,4 +1,4 @@
-package com.example.interviewcodingquestion.programs
+package com.example.interviewcodingquestion.programs.arrays
 
 /**
  * Rotate array k times
