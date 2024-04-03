@@ -5,9 +5,9 @@ package com.example.interviewcodingquestion.programs.arrays
  */
 
 fun main() {
- val arr = intArrayOf(1,2,1,4,2,5,3)
+    val arr1 = intArrayOf(1, 2, 1, 4, 2, 5, 3)
     //findDuplicateArray(arr)
-    findDuplicatesHashSet(arr)
+    findDuplicatesHashSet(arr1)
 }
 
 /**
@@ -17,9 +17,9 @@ fun main() {
  */
 fun findDuplicateArray(arr: IntArray) {
     val n = arr.size
-    for (i in 0 until n){
-        for (j in i+1 until n){
-            if (arr[i] == arr[j]){
+    for (i in 0 until n) {
+        for (j in i + 1 until n) {
+            if (arr[i] == arr[j]) {
                 val duplicate = arr[i]
                 println("duplicate element is $duplicate")
             }
