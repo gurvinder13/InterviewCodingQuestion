@@ -20,7 +20,7 @@ fun main() {
  * The space complexity of the function is also O(n) in the worst case
  *
  */
-fun removeDuplicateUsingSet(array: IntArray): IntArray {
+private fun removeDuplicateUsingSet(array: IntArray): IntArray {
     val set = HashSet<Int>()
     val list = mutableListOf<Int>()
     for (num in array) {
@@ -95,7 +95,7 @@ fun removeDuplicateUsingSet(array: IntArray): IntArray {
  * Time Complexity: O(n^2)
  * Space Complexity: O(n)
  */
-fun removeUsingNestedLoop(array: IntArray): IntArray {
+private fun removeUsingNestedLoop(array: IntArray): IntArray {
     val result = mutableListOf<Int>()
     for (num in array) {
         if (!result.contains(num)) {

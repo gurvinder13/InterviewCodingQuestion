@@ -15,7 +15,7 @@ fun main() {
  *  Time complexity: O(n^2)
  *  Space complexity: O(1)
  */
-fun findDuplicateArray(arr: IntArray) {
+private fun findDuplicateArray(arr: IntArray) {
     val n = arr.size
     for (i in 0 until n) {
         for (j in i + 1 until n) {
@@ -31,7 +31,7 @@ fun findDuplicateArray(arr: IntArray) {
  * HashSet
  *  time complexity of O(n) and a space complexity of O(n)
  */
-fun findDuplicatesHashSet(arr: IntArray) {
+private fun findDuplicatesHashSet(arr: IntArray) {
     val set = HashSet<Int>()
     println("Duplicate elements:")
     for (i in 0 until arr.size) {
