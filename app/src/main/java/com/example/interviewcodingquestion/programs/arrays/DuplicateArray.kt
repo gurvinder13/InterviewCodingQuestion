@@ -5,7 +5,7 @@ package com.example.interviewcodingquestion.programs.arrays
  */
 
 fun main() {
-    val arr1 = intArrayOf(1, 2, 1, 4, 2, 5, 3)
+    val arr1 = intArrayOf(1, 2, 4, 2, 5, 3)
     //findDuplicateArray(arr)
     findDuplicatesHashSet(arr1)
 }

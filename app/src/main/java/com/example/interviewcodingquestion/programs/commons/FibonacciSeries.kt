@@ -1,10 +1,5 @@
 package com.example.interviewcodingquestion.programs.commons
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-
 /**
  * Fibonacci Series
  */
@@ -45,8 +40,12 @@ private fun fibonacciIterative(n: Int): Int {
     var b = 1
     var sum: Int
     // special case
-    if (n == 0) return  a
-    if (n == 1) return  b
+    if (n == 0) {
+        return  a
+    }
+    if (n == 1) {
+        return  b
+    }
         for (i in 1 until n) {
             sum = a + b
             a = b
