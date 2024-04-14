@@ -30,6 +30,9 @@ public class LL {
         ll.removeFirst();
         ll.printLinkedList();
         System.out.println("Size of the linkedList is :- " + ll.getSize());
+        ll.reverseLL();
+        ll.printLinkedList();
+
 
     }
 }
@@ -129,6 +132,47 @@ class LinkedList1 {
         }
         return count;
     }
+    /**
+     *  reverse LL
+     *   Iterative Method
+     * Time complexity - O(n)
+     * Space complexity - O(1)
+     */
+    void reverseLL(){
+        if(head == null || head.next == null) {
+            return;
+        }
+
+        Node preNode = head;
+        Node curr = head.next;
+        while(curr!= null){
+            Node next = curr.next;
+            curr.next = preNode;
+            preNode = curr;
+            curr = next;
+
+        }
+        head.next = null;
+        head = preNode;
+    }
+
+   /** Recursive Method
+    *   Time complexity - O(n)
+    *     Space complexity - O(1)
+    *
+    */
+    public Node reverseListRecursive(Node head) {
+        //empty node || last node or only one node
+        if(head == null || head.next == null) {
+            return head;
+        }
+        Node newHead = reverseListRecursive(head.next);
+
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+
 
 }
 
@@ -140,7 +184,6 @@ class LinkedList1 {
     Node(int data) {
         this.data = data;
         this.next = null;
-        // size++;
     }
 
 }

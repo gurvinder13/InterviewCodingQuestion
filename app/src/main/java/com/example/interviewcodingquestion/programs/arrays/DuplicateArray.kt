@@ -8,6 +8,7 @@ fun main() {
     val arr1 = intArrayOf(1, 2, 4, 2, 5, 3)
     //findDuplicateArray(arr)
     findDuplicatesHashSet(arr1)
+    println("${findDuplicate(arr1)}")
 }
 
 /**
@@ -51,3 +52,14 @@ private fun findDuplicatesHashSet(arr: IntArray) {
         }
     }
 }*/
+
+private fun findDuplicate(arr:IntArray):List<Int>{
+    val set = mutableSetOf<Int>()
+    val list = mutableListOf<Int>()
+    for(num in arr){
+        if(!set.add(num)){
+            list.add(num)
+        }
+    }
+    return list
+}

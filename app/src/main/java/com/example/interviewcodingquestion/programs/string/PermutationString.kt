@@ -10,6 +10,16 @@ fun main() {
     val str = "abc"
     val arr = str.toCharArray()
     permutationString(arr, 0)
+
+    /**
+     * Output
+     * abc
+     * acb
+     * bac
+     * bca
+     * cba
+     * cab
+     */
 }
 
 /**
@@ -27,6 +37,7 @@ fun permutationString(arr: CharArray, fi: Int) {
     for (i in fi until arr.size) {
         swap(arr, i, fi)
         permutationString(arr, fi + 1)
+        swap(arr, i, fi)
     }
 
 }

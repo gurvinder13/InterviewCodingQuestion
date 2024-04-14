@@ -1,15 +1,16 @@
 package com.example.interviewcodingquestion.programs.arrays
 
 /**
- *
+ *  Maximum Consecutive Ones
  */
 
 fun main() {
-    val prices1 = intArrayOf(1, 1, 0, 1, 1, 1)
-    println("Output for prices1: ${maxConsecutiveOnes(prices1)}")
+    //val prices1 = intArrayOf(1, 1, 0, 1, 1, 1)
+    val prices1 = intArrayOf(1, 2,3,4,5)
+    println("Output for prices1: ${maxConsecutiveOnes1(prices1)}")
 
     val prices2 = intArrayOf(1, 0, 1, 1, 0, 1)
-    println("Output for prices2: ${maxConsecutiveOnes(prices2)}")
+   // println("Output for prices2: ${maxConsecutiveOnes(prices2)}")
 }
 
 /**
