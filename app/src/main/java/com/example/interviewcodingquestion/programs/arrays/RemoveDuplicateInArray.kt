@@ -7,11 +7,11 @@ package com.example.interviewcodingquestion.programs.arrays
 
 fun main() {
 
-    val arr = intArrayOf(1, 2, 3, 4, 2, 1, 5, 4)
+    val arr = intArrayOf(1, 1, 2)
     val result = removeDuplicateUsingSet(arr)
-    val result1 = removeUsingNestedLoop(arr)
+    //val result1 = removeUsingNestedLoop(arr)
     println(result.joinToString(","))
-    println(result1.joinToString(","))
+   // println(result1.joinToString(","))
 }
 
 /**

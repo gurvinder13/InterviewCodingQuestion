@@ -11,6 +11,7 @@ package com.example.interviewcodingquestion.programs.string
 fun main() {
     val st1 = "abcd"
     val st2 = "1234"
+
     val result = mergeString(st1, st2)
     println(result)
 }
