@@ -4,10 +4,10 @@ package com.example.interviewcodingquestion.programs.string
  * Reverse the String
  */
 
-fun main(){
+fun main() {
     val str = "ram"
-   // val print  = reverseStr(str)
-   // println(print)
+    // val print  = reverseStr(str)
+    // println(print)
     val result = reverseUsingRecursive(str)
     println(result)
 }
@@ -23,11 +23,11 @@ fun main(){
  *
  */
 
-private fun reverseStr(string: String) :String{
+private fun reverseStr(string: String): String {
     var result = ""
-    for (i in string.indices){
-        val char:Char = string[i]
-        result =  char + result
+    for (i in string.indices) {
+        val char: Char = string[i]
+        result = char + result
     }
     return result
 }
@@ -38,8 +38,8 @@ private fun reverseStr(string: String) :String{
  *  Space Complexity: The space complexity is also O(n) due to the recursive calls
  */
 
-private fun reverseUsingRecursive(string: String):String{
-    if (string.isEmpty()|| string.length ==1){
+private fun reverseUsingRecursive(string: String): String {
+    if (string.isEmpty() || string.length == 1) {
         return string
     }
     return reverseUsingRecursive(string.substring(1)) + string[0]

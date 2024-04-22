@@ -22,7 +22,7 @@ fun findVowels(string: String){
     for (char in string ){ // char in 'A'..'Z' || char in 'a'..'z'
         if (char in vowels){
             vowelCount++
-        } else/* if (char.isLetter())*/{
+        } else if (char.isLetter()){
             consonantCount++
         }
     }

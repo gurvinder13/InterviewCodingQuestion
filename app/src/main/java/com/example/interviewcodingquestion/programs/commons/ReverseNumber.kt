@@ -5,7 +5,7 @@ package com.example.interviewcodingquestion.programs.commons
  */
 
 fun main(){
-    val num = 1234
+    val num = 1534236469
     println(reverseNum(num))
 }
 
@@ -28,4 +28,24 @@ private fun reverseNum(num: Int):Int{
 
     }
     return reversedNum
+}
+
+/**
+ *  Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+ *
+ * Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+ */
+
+fun reverse(x: Int): Int {
+    var num = x.toLong()
+    var revNum:Long = 0
+
+    while(num != 0L){
+        val rem = num % 10
+        revNum = revNum * 10 + rem
+        num = num / 10
+    }
+
+    if(revNum > Int.MAX_VALUE || revNum < Int.MIN_VALUE) return 0
+    return revNum.toInt()
 }
