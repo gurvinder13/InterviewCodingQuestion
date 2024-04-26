@@ -5,11 +5,28 @@ package com.example.interviewcodingquestion.programs.string
  */
 
 fun main() {
-    val str = "ram"
-    // val print  = reverseStr(str)
-    // println(print)
-    val result = reverseUsingRecursive(str)
-    println(result)
+    val str = "I am good"
+     val print  = reverseStr(str)
+     val rs = reverseWords(print)
+    println(print)
+    println(rs)
+   // val result = reverseUsingRecursive(str)
+   // println(result)
+}
+
+private fun reverseWords(string: String):String{
+    //var words = string.split(" ").toTypedArray()
+    var words = string.split(" ").toMutableList()
+    var left = 0
+    var right = words.size - 1
+    while (left < right){
+        val temp = words[left]
+        words[left] = words[right]
+        words[right] = temp
+        left++
+        right--
+    }
+    return words.joinToString(" ")
 }
 
 
@@ -44,3 +61,4 @@ private fun reverseUsingRecursive(string: String): String {
     }
     return reverseUsingRecursive(string.substring(1)) + string[0]
 }
+

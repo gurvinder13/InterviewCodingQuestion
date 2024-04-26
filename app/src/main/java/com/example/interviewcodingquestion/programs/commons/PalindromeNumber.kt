@@ -37,7 +37,7 @@ private fun revers(x:Int):Int{
     var num = x
     var rev = 0
     while(num != 0){
-        var rem = num % 10
+        val rem = num % 10
         rev = rev * 10 + rem
         num /= 10
     }

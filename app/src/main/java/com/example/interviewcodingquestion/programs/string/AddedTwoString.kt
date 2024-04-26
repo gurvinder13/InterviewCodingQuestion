@@ -36,3 +36,20 @@ fun mergeString(st1: String, st2: String): String {
      return result.joinToString("")
 
 }
+
+fun mergeAlternately(s1:String , s2:String):String{
+    var result = ""
+    var i:Int = 0
+    while(i < s1.length || i < s2.length){
+        if(i < s1.length){
+            result = result + s1[i]
+
+        }
+        if(i < s2.length){
+            result = result + s2[i]
+
+        }
+        i++
+    }
+    return result
+}
