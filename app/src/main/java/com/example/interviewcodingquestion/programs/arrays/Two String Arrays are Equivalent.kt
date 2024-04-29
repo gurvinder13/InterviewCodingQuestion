@@ -6,8 +6,8 @@ package com.example.interviewcodingquestion.programs.arrays
 
 fun main(){
  val  arr1 = arrayOf("ab", "c")
- val  arr2 = arrayOf("a","bc")
-    println(arrayStringsAreEqual(arr1,arr2))
+ val  arr22 = arrayOf("a","bc")
+    println(arrayStringsAreEqual(arr1,arr22))
 }
 
 /**

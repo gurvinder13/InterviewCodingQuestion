@@ -19,9 +19,10 @@ package com.example.interviewcodingquestion.programs.arrays
  */
 
 fun main() {
-    val array = intArrayOf(1, 2, 3, 4, 5)
+    //val array = intArrayOf(1, 2, 3, 4, 5)
+    val array = intArrayOf(1, 2, 3, 4, 5, 6, 7)
     println("Before rotate array is :- { ${array.joinToString()}}")
-    rotate(array, k = 2)
+    rotate(array, k = 3)
     println("After rotate array is :- { ${array.joinToString()} }")
     /**
      *  Output
@@ -31,6 +32,9 @@ fun main() {
 
 }
 
+/**
+ *  Given an integer array nums, rotate the array to the left by k steps, where k is non-negative.
+ */
 fun rotate(arr: IntArray, k: Int) {
     val size = arr.size
     var rotations = k % size
@@ -41,6 +45,21 @@ fun rotate(arr: IntArray, k: Int) {
     reverse(arr, 0, rotations - 1)
     reverse(arr, start = rotations, end = size - 1)
     reverse(arr, 0, size - 1)
+}
+
+/**
+ * Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+ */
+
+fun rotate1(nums: IntArray, k: Int): Unit {
+    var k1 = k % nums.size
+    if (k1 <= 0) {
+        k1 += nums.size
+    }
+    reverse(nums, 0, nums.size - 1)
+    reverse(nums, 0, k1 - 1)
+    reverse(nums, k1, nums.size - 1)
+
 }
 
 private fun reverse(arr: IntArray, start: Int, end: Int) {
@@ -54,3 +73,5 @@ private fun reverse(arr: IntArray, start: Int, end: Int) {
         right--
     }
 }
+
+
