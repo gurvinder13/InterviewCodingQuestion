@@ -15,5 +15,4 @@ fun main() {
 
 fun strStr(haystack: String, needle: String): Int {
     return if (needle.isEmpty()) 0 else if (haystack.contains(needle)) haystack.indexOf(needle) else -1
-
 }
