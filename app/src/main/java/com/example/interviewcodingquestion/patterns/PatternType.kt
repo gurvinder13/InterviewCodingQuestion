@@ -2,20 +2,23 @@ package com.example.interviewcodingquestion.patterns
 
 /**
  * This Kotlin file contains methods for printing various patterns.
- * It is structured to demonstrate different types of loop-based pattern problems
- * commonly asked in coding interviews.
+ * It demonstrates classic pattern-printing logic, frequently used in coding interviews.
  */
 
 fun main() {
-    // Calling the 4x4 square pattern printer
-   // print4By4Square()
-   // printLeftTriangle2(5)
-    printPattern(4)
-
+    // Uncomment methods below to see individual pattern outputs
+    // print4By4Square()
+    // printLeftTriangle(5)
+    // printLeftTriangle1(5)
+    // printLeftTriangle2(5)
+    // printPattern1(5)
+    // printPattern2(5)
+    // printPattern3(5)
+    printPattern(5)
 }
 
 /**
- * Prints a 4x4 square made of asterisk (*) characters.
+ * Prints a 4x4 square of asterisks (*)
  *
  * Output:
  * ****
@@ -24,50 +27,154 @@ fun main() {
  * ****
  */
 fun print4By4Square() {
-    for (i in 0 until 4) {              // Outer loop for rows (0 to 3)
-        for (j in 0 until 4) {          // Inner loop for columns (0 to 3)
-            print("*")                 // Print asterisk on the same line
+    for (i in 0 until 4) {
+        for (j in 0 until 4) {
+            print("*")
         }
-        println()                      // Move to next line after one row is printed
+        println()
     }
 }
+
 /**
- * Prints a left-aligned right-angled triangle using asterisks (*).
+ * Prints a left-aligned right-angled triangle using asterisks (*)
  *
- * Example for n = 4:
+ * Output for n = 5:
  * *
  * * *
  * * * *
  * * * * *
+ * * * * * *
  */
-fun printLeftTriangle(n:Int){
-    for (i in 0 until n ){
-        for (j in 0..i){
+fun printLeftTriangle(n: Int) {
+    for (i in 0 until n) {
+        for (j in 0..i) {
             print("* ")
         }
         println()
     }
 }
-fun printLeftTriangle1(n:Int){
-    for (i in 1.. n ){
-        for (j in 1..i){
+
+/**
+ * Prints a left-aligned triangle with numbers increasing in each row
+ *
+ * Output for n = 5:
+ * 1
+ * 1 2
+ * 1 2 3
+ * 1 2 3 4
+ * 1 2 3 4 5
+ */
+fun printLeftTriangle1(n: Int) {
+    for (i in 1..n) {
+        for (j in 1..i) {
             print("$j ")
         }
         println()
     }
 }
-fun printLeftTriangle2(n:Int){
-    for (i in 1.. n ){
-        for (j in 1..i){
+
+/**
+ * Prints a left-aligned triangle with same number repeated in each row
+ *
+ * Output for n = 5:
+ * 1
+ * 2 2
+ * 3 3 3
+ * 4 4 4 4
+ * 5 5 5 5 5
+ */
+fun printLeftTriangle2(n: Int) {
+    for (i in 1..n) {
+        for (j in 1..i) {
             print("$i ")
         }
         println()
     }
 }
-fun printPattern(n:Int){
-    for (i in 0.. n ){
-        for (j in 0 until n-i){
+
+/**
+ * Prints an inverted left-aligned triangle of asterisks
+ *
+ * Output for n = 5:
+ * * * * * *
+ * * * * *
+ * * * *
+ * * *
+ * *
+ */
+fun printPattern1(n: Int) {
+    for (i in 0..n) {
+        for (j in 0 until n - i) {
             print("* ")
+        }
+        println()
+    }
+}
+
+/**
+ * Prints an inverted triangle with decreasing number sequence in each row
+ *
+ * Output for n = 5:
+ * 1 2 3 4 5
+ * 1 2 3 4
+ * 1 2 3
+ * 1 2
+ * 1
+ */
+fun printPattern2(n: Int) {
+    for (i in 0..n) {
+        for (j in 1..n - i) {
+            print("$j ")
+        }
+        println()
+    }
+}
+
+/**
+ * Prints a centered pyramid of asterisks
+ *
+ * Output for n = 5:
+ *     *
+ *    ***
+ *   *****
+ *  *******
+ * *********
+ */
+fun printPattern3(n: Int) {
+    for (i in 0 until n) {
+        for (j in 0 until n - i - 1) {
+            print(" ")
+        }
+        for (j in 0 until 2 * i + 1) {
+            print("*")
+        }
+        for (j in 0 until n - i - 1) {
+            print(" ") // Optional for symmetry
+        }
+        println()
+    }
+}
+
+/**
+ * Prints an inverted centered pyramid of asterisks
+ *
+ * Output for n = 5:
+ * *********
+ *  *******
+ *   *****
+ *    ***
+ *     *
+ */
+fun printPattern(n: Int) {
+    for (i in 0 until n) {
+        for (j in 0 until i) {
+            print(" ")
+        }
+        for (j in 0 until (2 * n) - (2 * i + 1)) {
+            print("*")
+        }
+        for (j in 0 until i) {
+            print(" ") // Optional for symmetry
         }
         println()
     }
